@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "watch": "nodemon --watch src --ext scss --exec \"npm run bs-scss\"",
+    "bs-scss": "sass --no-source-map --silence-deprecation=import,color-functions,global-builtin,if-function src/bootstrap.scss:assets/vendor-bootstrap.css && postcss assets/vendor-bootstrap.css --replace --no-map --use autoprefixer && minify assets/vendor-bootstrap.css > assets/vendor-bootstrap.min.css && shx rm assets/vendor-bootstrap.css",
+    "bs-js": "shx cp node_modules/bootstrap/dist/js/bootstrap.bundle.min.js assets/vendor-bootstrap.bundle.min.js",
+    "swiper": "shx cp node_modules/swiper/swiper-bundle.min.js assets/vendor-swiper.bundle.min.js && shx cp node_modules/swiper/swiper-bundle.min.css assets/vendor-swiper.bundle.min.css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "swiper": "^11.0.6"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "caniuse-lite": "^1.0.30001585",
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "minify": "^11.0.1",
+    "shx": "^0.3.4",
+    "nodemon": "^3.1.14",
+    "npm-watch": "^0.11.0",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "sass": "^1.70.0"
+  }
+}
