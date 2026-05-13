@@ -1,6 +1,7 @@
 <a 
   class="navbar-logo" 
-  href="{{ routes.root_url }}">
+  href="{{ routes.root_url }}"
+  style="display: inline-block;">
   {% if block.settings.logo %}
     {% assign logo_height_x2 = block.settings.logo_height | times: 2 %}
     <img
@@ -9,7 +10,8 @@
       alt="{{ shop.name }}"
       width="{{ block.settings.logo_height | times: block.settings.logo.aspect_ratio | round }}" 
       height="{{ block.settings.logo_height }}"
-      loading="lazy">
+      loading="lazy"
+      style="max-height: {{ block.settings.logo_height }}px; width: auto;">
   {% else %}
     <span>
       {{ shop.name }}
