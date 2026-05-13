@@ -94,13 +94,13 @@
           style="max-width: {{ block.settings.container_max_width | append: 'px' }};">
           <div
             class="row align-items-center flex-grow-1">
-            <div class="col-4">
-              {% render 'navbar-desktop-menu', block: block %}
-            </div>
-            <div class="col-4 text-center">
+            <div class="col-auto">
               {% render 'navbar-logo', block: block %}
             </div>
-            <div class="col-4">
+            <div class="col">
+              {% render 'navbar-desktop-menu', block: block %}
+            </div>
+            <div class="col-auto">
               {% render 'navbar-desktop-icons', block: block %}
             </div>
           </div>
